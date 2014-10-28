@@ -1,0 +1,139 @@
+&pgstar
+
+         
+!pause = .true.
+         
+      Grid2_win_flag = .true.
+
+         Grid2_win_width = 14
+         Grid2_win_aspect_ratio = 0.5 ! aspect_ratio = height/width
+
+
+         Grid2_num_cols = 7 ! divide plotting region into this many equal width cols
+         Grid2_num_rows = 8 ! divide plotting region into this many equal height rows
+         Grid2_num_plots = 6 ! <= 10
+
+         Grid2_plot_pad_right(5) = 0.00 ! fraction of full window width for padding on right
+         Grid2_plot_colspan(5) = 3 ! plot spans this number of columns 
+         Grid2_plot_colspan(4) = 5 ! plot spans this number of columns 
+
+         Grid2_plot_name(6) = 'Profile_Panels1'
+         Grid2_plot_row(6) = 1 ! number from 1 at top
+         Grid2_plot_rowspan(6) = 8 ! plot spans this number of rows
+         Grid2_plot_col(6) =  6 ! number from 1 at left
+         Grid2_plot_colspan(6) = 2 ! plot spans this number of columns 
+         Grid2_plot_pad_left(6) = 0.06 ! fraction of full window width for padding on left
+         Grid2_plot_pad_right(6) = 0.03 ! fraction of full window width for padding on right
+         Grid2_plot_pad_top(6) = 0.0 ! fraction of full window height for padding at top
+         Grid2_plot_pad_bot(6) = 0.0 ! fraction of full window height for padding at bottom
+         Grid2_txt_scale_factor(6) = 0.65 ! multiply txt_scale for subplot by this
+
+
+
+! file output
+!Grid2_file_flag = .true.
+   Grid2_file_dir = 'png'
+   Grid2_file_prefix = 'grid_'
+   Grid2_file_cnt = 10 ! 1 ! output when mod(model_number,Grid2_file_cnt)==0
+   Grid2_file_width = -1 ! negative means use same value as for window
+   Grid2_file_aspect_ratio = -1 ! negative means use same value as for window
+      
+      
+      show_TRho_Profile_eos_regions = .false.
+      TRho_Profile_xmin = -11.1
+      TRho_Profile_xmax = 10.2
+      TRho_Profile_ymin = 3.1
+      TRho_Profile_ymax = 10.2        
+
+         Text_Summary1_name(1,3) = 'log_cntr_Rho'
+         Text_Summary1_name(2,3) = 'log_cntr_T'
+         Text_Summary1_name(3,3) = 'max_T_mass'
+         Text_Summary1_name(4,3) = 'max_T_lgRho'
+         Text_Summary1_name(5,3) = 'max_T_lgT'
+
+         !Text_Summary1_name(6,3) = 'center_ye'
+         
+         !Text_Summary1_name(7,3) = 'iron_core_infall'
+         !Text_Summary1_name(8,3) = 'non_iron_core_infall'
+         
+         !Text_Summary1_name(8,1) = 'center o16'
+         Text_Summary1_name(8,1) = 'species'
+      
+      !Abundance_win_flag = .true.
+      Abundance_win_width = 6
+      Abundance_win_aspect_ratio = 1 ! aspect_ratio = height/width
+      
+      
+
+!      Abundance_xaxis_name = 'logR' 
+!      Abundance_xaxis_reversed = .false.
+!      Abundance_xmin = -4 ! only used if /= -101d0
+!      Abundance_xmax = -2 ! -101 ! only used if /= -101d0
+
+      Abundance_xaxis_name = 'logRho' 
+      Abundance_xaxis_reversed = .true.
+      Abundance_xmin = -5 ! only used if /= -101d0
+
+      Abundance_xmax = 9 ! -101 ! only used if /= -101d0
+      
+      Abundance_line_txt_scale_factor = 1.1 ! relative to other text
+      Abundance_legend_txt_scale_factor = 1.1 ! relative to other text
+
+         Abundance_legend_max_cnt = 0
+      
+      Abundance_log_mass_frac_min = -3 ! only used if < 0
+      
+      
+      
+      !Abundance_file_flag = .true.
+      Abundance_file_dir = 'png'
+      Abundance_file_prefix = 'abund_'
+      Abundance_file_cnt = 5 ! output when mod(model_number,Abundance_file_cnt)==0
+      Abundance_file_width = -1 ! (inches) negative means use same value as for window
+      Abundance_file_aspect_ratio = -1 ! negative means use same value as for window
+      
+      
+      !Profile_Panels1_win_flag = .true.
+      Profile_Panels1_win_width = 6
+      Profile_Panels1_win_aspect_ratio = 1 ! aspect_ratio = height/width
+
+      Profile_Panels1_title = 'Profile Panels'      
+      Profile_Panels1_num_panels = 3         
+      Profile_Panels1_yaxis_name(1) = 'logT'         
+      Profile_Panels1_other_yaxis_name(1) = 'entropy'   
+         Profile_Panels1_other_ymin(1) = 0 ! only used if /= -101d0
+         Profile_Panels1_other_ymax(1) = -101d0 ! only used if /= -101d0
+         Profile_Panels1_other_ymargin(1) = 1
+            
+      Profile_Panels1_yaxis_name(2) = 'logRho'         
+      Profile_Panels1_other_yaxis_name(2) = 'logR_cm' 
+         Profile_Panels1_other_ymin(2) = -101d0 ! only used if /= -101d0
+         Profile_Panels1_other_ymax(2) = -101d0 ! only used if /= -101d0
+         Profile_Panels1_other_ymargin(2) = 0
+      
+      Profile_Panels1_yaxis_name(3) = 'log_opacity'         
+         Profile_Panels1_ymin(3) = -1 ! only used if /= -101d0
+         Profile_Panels1_ymax(3) = 1 ! only used if /= -101d0        
+         Profile_Panels1_ymargin(3) = 0.1 
+      Profile_Panels1_other_yaxis_name(3) = 'vel_km_per_s' 
+         Profile_Panels1_other_ymin(3) = -1200 ! only used if /= -101d0
+         Profile_Panels1_other_ymax(3) = 300d0 ! only used if /= -101d0
+         Profile_Panels1_other_ymargin(3) = 10
+  
+  
+  
+!      Profile_Panels1_xaxis_name = 'logR'
+!      Profile_Panels1_xaxis_reversed = .false.
+!      Profile_Panels1_xmin = -4 ! only used if /= -101d0
+!      Profile_Panels1_xmax = -2 ! -101d0 ! only used if /= -101d0
+  
+      Profile_Panels1_xaxis_name = 'logT'
+      Profile_Panels1_xaxis_reversed = .false.
+      Profile_Panels1_xmin = 3.3 ! only used if /= -101d0
+      Profile_Panels1_xmax =  -101d0 ! only used if /= -101d0
+      
+      Profile_Panels1_xmargin = 0d0
+
+
+
+/ ! end of pgstar namelist
