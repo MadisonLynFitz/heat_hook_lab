@@ -6,6 +6,9 @@
 
       !change_initial_net = .true.      
       !new_net_name = 'approx21_cr60.net'
+      
+      load_saved_model=.true.
+      saved_model_name='RSG_15M.mod'
 
       kappa_file_prefix = 'gs98'
 
@@ -97,7 +100,7 @@
          include_dmu_dt_in_eps_grav = .true.
 
          use_Type2_opacities = .true.
-         Zbase = -1 ! must set this in the main inlist
+         Zbase = 0.02! must set this in the main inlist
 
          xa_scale = 1d-5
          newton_itermin = 2

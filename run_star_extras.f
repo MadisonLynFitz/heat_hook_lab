@@ -27,6 +27,8 @@
       use const_def
 
       implicit none
+      
+      use_other_energy = .true.
 
       ! these routines are called by the standard run_star check_model
       contains
@@ -36,7 +38,7 @@
          integer, intent(out) :: ierr
          ierr = 0
 
-         s% other_energy => fixed_energy_dep
+         s% other_energy => other_energy
 
          ! this is the place to set any procedure pointers you want to change
          ! e.g., other_wind, other_mixing, other_energy  (see star_data.inc)
