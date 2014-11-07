@@ -34,5 +34,9 @@
     
   ! mechanism for mass loss due to wave heating 
     super_eddington_wind_eta=1 
-
+    
+    x_ctrl(1) = 7.5
+    x_ctrl(2) = 2
+    
+    
 / ! end of controls namelist
