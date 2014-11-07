@@ -27,8 +27,15 @@
 
 &controls
 
+	use_other_energy = .true.
+	
+	! mechanism for mass loss due to wave heating 
+    super_eddington_wind_eta=1 
+
   ! starting specifications
     initial_mass = 15 ! in Msun units
+    x_ctrl(1) = 10
+    x_ctrl(2) = 3
 
   ! stop when the star nears ZAMS (Lnuc/L > 0.99)
     Lnuc_div_L_zams_limit = 0.99d0
@@ -37,12 +44,5 @@
   ! stop when the center mass fraction of h1 drops below this limit
     xa_central_lower_limit_species(1) = 'h1'
     xa_central_lower_limit(1) = 1d-3
-    
-  ! mechanism for mass loss due to wave heating 
-    super_eddington_wind_eta=1 
-    
-    x_ctrl(1) = 7
-    x_ctrl(2) = 0.7
-    
     
 / ! end of controls namelist
