@@ -39,10 +39,10 @@
     xa_central_lower_limit(1) = 1d-3
     
   ! mechanism for mass loss due to wave heating 
-   ! super_eddington_wind_eta=1 
+    super_eddington_wind_eta=1 
     
-   ! x_ctrl(1) = 7.5
-    !x_ctrl(2) = 2
+    x_ctrl(1) = 7
+    x_ctrl(2) = 0.7
     
     
 / ! end of controls namelist
