@@ -3,6 +3,10 @@
   ! MESA uses PGPLOT for live plotting and gives the user a tremendous
   ! amount of control of the presentation of the information.
 
+  ! Save png files of graphs 
+    file_device = 'png'
+    file_extension = 'png'
+
   ! show HR diagram
   ! this plots the history of L,Teff over many timesteps
     HR_win_flag = .true.
@@ -17,6 +21,12 @@
     HR_win_width = 6
     HR_win_aspect_ratio = 1.0
 
+	HR_file_dir = 'png'
+	HR_file_flag = .true.
+	HR_file_prefix = 'hr_'
+	HR_file_cnt = 5 ! output when mod(model_number,TRho_Profile_file_cnt)==0
+	HR_file_width = -1 ! (inches) negative means use same value as for window
+	HR_file_aspect_ratio = -1 ! negative means use same value as for window
 
   ! show temperature/density profile
   ! this plots the internal structure at single timestep
@@ -31,5 +41,12 @@
   ! set window size (aspect_ratio = height/width)
     TRho_Profile_win_width = 8
     TRho_Profile_win_aspect_ratio = 0.75
-
+    
+    TRho_Profile_file_dir = 'png'
+	TRho_Profile_file_flag = .true.
+	TRho_Profile_file_prefix = 'trho_profile_'
+	TRho_Profile_file_cnt = 5 ! output when mod(model_number,TRho_Profile_file_cnt)==0
+	TRho_Profile_file_width = -1 ! (inches) negative means use same value as for window
+	TRho_Profile_file_aspect_ratio = -1 ! negative means use same value as for window
+    
 / ! end of pgstar namelist

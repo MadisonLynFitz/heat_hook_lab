@@ -12,9 +12,15 @@
   ! save a model at the end of the run
     save_model_when_terminate = .false.
     save_model_filename = '15M_at_TAMS.mod'
-
+   
+  ! load model at the start of the run  
+    load_saved_model = .false.
+    saved_model_name = '15M_at_TAMS.mod'
+    
   ! display on-screen plots
     pgstar_flag = .true.
+    
+    pause_before_terminate = .true.
 
 / !end of star_job namelist
 
@@ -33,10 +39,10 @@
     xa_central_lower_limit(1) = 1d-3
     
   ! mechanism for mass loss due to wave heating 
-    super_eddington_wind_eta=1 
+   ! super_eddington_wind_eta=1 
     
-    x_ctrl(1) = 7.5
-    x_ctrl(2) = 2
+   ! x_ctrl(1) = 7.5
+    !x_ctrl(2) = 2
     
     
 / ! end of controls namelist
